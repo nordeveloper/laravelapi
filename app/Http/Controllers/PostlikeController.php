@@ -9,6 +9,7 @@ class PostlikeController extends Controller
 {
     public function store(Request $request)
     {
+
         return PostLike::create($request->all());
     }
 }

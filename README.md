@@ -3,6 +3,41 @@
 <p>Laravel Api, Create rest api for user login and register, user post and like/dislike for other user posts.</p>
 
 
+<p>
+POST Login
+http://laravelapi.loc/api/login
+</p>
+
+<p>
+POST - register
+http://laravelapi.loc/api/register
+</p>
+
+<p>
+POST - logout
+http://laravelapi.loc/api/logout
+</p>
+
+<p>
+POST - Add
+http://laravelapi.loc/api/posts
+
+<p>
+PUT  - Update
+http://laravelapi.loc/api/posts/{id}
+</p>
+
+<p>
+DELETE - Delete
+http://laravelapi.loc/api/posts/{id}
+</p>
+
+<p>
+POST add like
+http://laravelapi.loc/api/postlike
+</p>
+
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

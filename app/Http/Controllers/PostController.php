@@ -20,17 +20,6 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-
-        $authorization = $request->header('Authorization');
-        $token = null;
-        if (substr($authorization, 0, 7) === "Bearer ") {
-            $token = substr($authorization, 7);
-        }     
-
-        if ($token === null) {
-            abort(403);
-        }
-
         $user = Auth::user();
 
         $data  = New Post();
@@ -44,16 +33,6 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
 
-        $authorization = $request->header('Authorization');
-        $token = null;
-        if (substr($authorization, 0, 7) === "Bearer ") {
-            $token = substr($authorization, 7);
-        }     
-
-        if ($token === null) {
-            abort(403);
-        }        
-
         $Post = Post::findOrFail($id);
 
         $Post->update($request->all());
@@ -63,15 +42,6 @@ class PostController extends Controller
 
     public function delete(Request $request, $id)
     {
-        $authorization = $request->header('Authorization');
-        $token = null;
-        if (substr($authorization, 0, 7) === "Bearer ") {
-            $token = substr($authorization, 7);
-        }     
-
-        if ($token === null) {
-            abort(403);
-        }
 
         $Post = Post::findOrFail($id);
         $Post->delete();
